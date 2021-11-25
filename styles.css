@@ -2,7 +2,7 @@ header{
     width: 100%;
     height: 89px;
 
-    position: fixed;
+    position: absolute;
     top: 0px;
     left: 0px;
     z-index: 99;
@@ -17,27 +17,128 @@ main {
 
     background-color: #e5e5e5;
 }
+input{
+     width: 399px;
+    height: 40px;
+    
+    margin-left: auto;
+    margin-left: auto;  
+    
+    border-radius: 10px; 
+
+    background-color: #f2f2f2;
+    color: #818181;
+
+    outline: none;
+    border: none;
+}
+button{
+    width: 399px;
+    height: 40px;
+
+    margin-left: auto;
+    margin-left: auto;
+    margin-top: 23px;
+
+    background-color: #c4c4c4;
+    color: #ffffff;
+
+   border-radius: 10px; 
+
+   outline: none;
+   border:none;
+}
 .selectionContainer{
     width: 50%;
-    height: 64.65%;
+    height: 785px;
 
     margin-left: 0px;
     margin-top: 89px;
 }
 .ilustrationContainer{
     width: 50%;
-    height: 64.65%;
+    height: 785px;
 
     margin-right: 0px;
     margin-top: 89px;
 
     background-color: #404EED;
 }
+.contentContainer{
+    width: 400px;
+    height: 706px;
+
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 38px;
+
+    background-color: chartreuse;
+
+}
+.roundDiv{
+    width: 100px;
+    height: 100px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    /* margin-right: 40px;
+    margin-top: 29.5px; */
+
+    background-color: chartreuse;
+
+    border-radius: 50px;
+}
+.optionSpan{
+    
+}
+.optionsContainer{
+    width: 400px;
+    height: 159px;
+
+    display: flex;
+    justify-content: space-between;
+
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 31px; 
+
+    background-color: blue;
+}
+.neckContainer{
+    width: 400px;
+    height: 159px;
+
+    display: flex;
+
+    margin-left: auto;
+    margin-right: auto; 
+    margin-top: 31px; 
+
+    background-color: blue;
+}
+.materialContainer{
+    width: 400px;
+    height: 159px;
+
+    display: flex;
+
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 31px; 
+
+    background-color: blue;
+}
 footer{
     width: 100%;
-    height: 28.1481%;
+    height: 342px;
 
     margin-right: 0px;
-    margin-top: 89px;
     
+    background-color: red;
+}
+footer span{
+
 }
