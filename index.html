@@ -18,22 +18,22 @@
     <main>
         <section class="selectionContainer">
             <div class="contentContainer">
-                <span>Escolha o modelo</span>
+                <span class="sectionsTitleSpan">Escolha o modelo</span>
                 <div class="optionsContainer">
-                    <div>
-                        <div class="roundDiv">
+                    <div class="model">
+                        <div onclick="selectModel(this)" class="roundDiv">
                             <img src="assets/tshirt.svg">
                         </div>
                         <span class="optionSpan">T-shirt</span>
                     </div>
-                    <div>
-                        <div class="roundDiv">
+                    <div class="model">
+                        <div onclick="selectModel(this)" class="roundDiv">
                             <img src="assets/tank-top.svg">
                         </div>
                         <span class="optionSpan">Camiseta</span>
                     </div>
-                    <div>
-                        <div class="roundDiv">
+                    <div class="model">
+                        <div onclick="selectModel(this)" class="roundDiv">
                             <img src="assets/long-sleeves.svg">
                         </div>
                         <span class="optionSpan">Manga longa</span>
@@ -41,20 +41,20 @@
                 </div>
                 <span class="optionSpan">Escolha a gola</span>
                 <div class="optionsContainer">
-                    <div>
-                        <div class="roundDiv">
+                    <div class="neck">
+                        <div onclick="selectNeck(this)" class="roundDiv">
                             <img src="assets/v-neck.svg">
                         </div>
                         <span class="optionSpan">Gola V</span>
                     </div>
-                    <div>
-                        <div class="roundDiv">
+                    <div class="neck">
+                        <div onclick="selectNeck(this)" class="roundDiv">
                             <img src="assets/shirt.svg">
                         </div>
                         <span class="optionSpan">Gola redonda</span>
                     </div>
-                    <div>
-                        <div class="roundDiv">
+                    <div class="neck">
+                        <div onclick="selectNeck(this)" class="roundDiv">
                             <img src="assets/polo-shirt.svg">
                         </div>
                         <span class="optionSpan">Gola polo</span>
@@ -62,27 +62,27 @@
                 </div>
                 <span>Escolha o tecido</span>
                 <div class="optionsContainer">
-                    <div>
-                        <div class="roundDiv">
+                    <div class="material"> 
+                        <div onclick="selectMaterial(this)" class="roundDiv">
                             <img src="assets/silk.svg">
                         </div>
                         <span class="optionSpan">Seda</span>
                     </div>
-                    <div>
-                        <div class="roundDiv">
+                    <div class="material">
+                        <div onclick="selectMaterial(this)" class="roundDiv">
                             <img src="assets/organic-cotton.svg">
                         </div>
                         <span class="optionSpan">Algodão</span>
                     </div>
-                    <div>
-                        <div class="roundDiv">
+                    <div class="material">
+                        <div onclick="selectMaterial(this)" class="roundDiv">
                             <img src="assets/quimica.svg">
                         </div>
                         <span class="optionSpan">Poliéster</span>
                     </div>
                 </div>
-                <input type="text" placeholder="Insira o link" >
-                <button>Confirmar pedido</button>
+                <input class="refImage" type="text" value="" name="refImage" placeholder="Insira o link" >
+                <button class="buttonDisabled">Confirmar pedido</button>
             </div>
         </section>
         <section class="ilustrationContainer">
@@ -92,5 +92,6 @@
     <footer>
         <span>últimos pedidos</span>
     </footer>
+    <script src="script.js"></script>
 </body>
 </html>

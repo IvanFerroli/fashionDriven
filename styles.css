@@ -1,24 +1,31 @@
 header{
     width: 100%;
     height: 89px;
-
+    
     position: absolute;
     top: 0px;
     left: 0px;
     z-index: 99;
-
+    
     display: flex;
     align-items: center;
-
+    
     background-color: #404EED;
 }
 main {
     display: flex;
-
+    
     background-color: #e5e5e5;
 }
+span{
+    font-family: robototo;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 18px;
+    color: #23233
+}
 input{
-     width: 399px;
+    width: 399px;
     height: 40px;
     
     margin-left: auto;
@@ -40,13 +47,16 @@ button{
     margin-left: auto;
     margin-top: 23px;
 
-    background-color: #c4c4c4;
+    background-color: #404EED;
     color: #ffffff;
 
    border-radius: 10px; 
 
    outline: none;
    border:none;
+}
+.buttonDisabled{
+    background-color: #c4c4c4;   
 }
 .selectionContainer{
     width: 50%;
@@ -73,8 +83,10 @@ button{
     margin-right: auto;
     margin-top: 38px;
 
-    background-color: chartreuse;
-
+    background-color: #e5e5e5;
+}
+.sectionsTitleSpan{
+    margin-bottom: 8.5px;
 }
 .roundDiv{
     width: 100px;
@@ -87,12 +99,9 @@ button{
     /* margin-right: 40px;
     margin-top: 29.5px; */
 
-    background-color: chartreuse;
+    background-color: #f2f2f2;
 
     border-radius: 50px;
-}
-.optionSpan{
-    
 }
 .optionsContainer{
     width: 400px;
@@ -105,31 +114,10 @@ button{
     margin-right: auto;
     margin-bottom: 31px; 
 
-    background-color: blue;
+   
 }
-.neckContainer{
-    width: 400px;
-    height: 159px;
-
-    display: flex;
-
-    margin-left: auto;
-    margin-right: auto; 
-    margin-top: 31px; 
-
-    background-color: blue;
-}
-.materialContainer{
-    width: 400px;
-    height: 159px;
-
-    display: flex;
-
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 31px; 
-
-    background-color: blue;
+.optionSpan{
+    margin-top: 8.5px;
 }
 footer{
     width: 100%;
@@ -140,5 +128,8 @@ footer{
     background-color: red;
 }
 footer span{
-
+    background-color: blue;
+}
+.contentContainer .optionsContainer .roundDiv.selected {
+    border: 3px solid #404EED;
 }
