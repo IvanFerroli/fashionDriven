@@ -186,7 +186,16 @@ footer{
     height: 180px;
     width: 180px;
 }
-.usersModelsSpan{
+.usersModelsSpan1{
+
+    font-size: 20px;
+    font-family: roboto;
+    font-weight: 400;
+    font-style: normal;
+    color: #232323;
+}
+.usersModelsSpan2{
+
     font-size: 20px;
     font-family: roboto;
     font-weight: 700;

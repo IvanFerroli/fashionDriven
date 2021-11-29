@@ -7,35 +7,29 @@ const confirmationMaterial = document.querySelector(".material .selected") */
 const usersModelsContainer = document.querySelector(".usersModelsContainer")
 const usersModelsBox = document.querySelector(".usersModelsBox")
 
+
 let itemsSelected = 0;
 
-let model
+let model;
 let neck;
 let material;
 
-/* alert(confirmationRefImage) */
+let modelPost;
+let neckPost;
+let materialPost;
+let imagePost;
+let ownerPost;
 
-function selectModel(element) {
+function userName (){
+   ownerPost = prompt("Qual é o seu nome")
+}
+userName()
+
+function selectModel(element, selectedModel) {
 
     const selected = document.querySelector(".model .selected")
 
-    if(selected != null){
-        selected.classList.remove("selected")
-    }else{
-
-        itemsSelected = itemsSelected + 1
-    }
-
-    element.classList.add("selected")
-
-
-    validateSelection(); 
-
-}
-
-function selectNeck(element) {
-
-    const selected = document.querySelector(".neck .selected")
+    modelPost = selectedModel
 
     if(selected != null){
         selected.classList.remove("selected")
@@ -43,36 +37,62 @@ function selectNeck(element) {
         
         itemsSelected = itemsSelected + 1
     }
-
-    element.classList.add("selected")
-
     
-    validateSelection(); 
+    element.classList.add("selected")
+    
 
+    validateSelection(); 
+    
 }
 
-function selectMaterial(element) {
+function selectNeck(element, selectedNeck) {
 
-    const selected = document.querySelector(".material .selected")
+    const selected = document.querySelector(".neck .selected")
+
+    neckPost = selectedNeck
 
     if(selected != null){
         selected.classList.remove("selected")
     }else{
-
+        
         itemsSelected = itemsSelected + 1
+    }
+    
+    element.classList.add("selected")
+    
+    
+    validateSelection(); 
+    
+}
+
+function selectMaterial(element, selectedMaterial) {
+
+    const selected = document.querySelector(".material .selected")
+    materialPost = selectedMaterial
+
+    if(selected != null){
+        selected.classList.remove("selected")
+    }else{
+        
+        itemsSelected = itemsSelected + 1
+
     }
 
     element.classList.add("selected")
-
+    
     
     validateSelection();
 
+    
 }
 
 function validateSelection (confirmationModel, confirmationNeck, confirmationMaterial, confirmationReferenceImage){
 
     const inputRefImage = document.querySelector(".refImage")
     const botao = document.querySelector(".classeDoBotao")
+
+    imagePost = inputRefImage.value
+
     usersModelsContainer
     if(itemsSelected === 3 && validURL(inputRefImage.value) === true){
         botao.classList.remove("buttonDisabled")
@@ -89,29 +109,9 @@ function validURL(str) {
       '(\\:\\d+)?(\\/[-a-z\\d%_.~+]*)*'+ // port and path
       '(\\?[;&a-z\\d%_.~+=-]*)?'+ // query string
       '(\\#[-a-z\\d_]*)?$','i'); // fragment locator
-    return !!pattern.test(str);
+      return !!pattern.test(str);
   }
-
- /*  function getUsersModels (){
-      modelsAnswer = axios.get("https://mock-api.driven.com.br/api/v4/shirts-api/shirts");
-
-      modelsAnswer.then(answer())
-      
-      function answer (id, model, neck, material, image, owner, author){
-          let data = answer.data;
-          for (let i = 0; i < data.length; i++) {
-              let id = data[i].id;
-              let image = data[i].image;
-              let author = data[i].author;
-              
-              usersModelsBox.innerHTML += renderizeUsersModels(id, image, author)
-            }
-        };
-
-    }
-
-getUsersModels() */
-
+  
 const getUsersModels = () => {
     modelsAnswer = axios.get("https://mock-api.driven.com.br/api/v4/shirts-api/shirts");
 
@@ -133,24 +133,22 @@ function renderizeUsersModels(image, owner){
     return `
       <div class="usersModelsBox">
         <img class="usersModelsImage" src="${image}">
-        <span class="usersModelsSpan">Criador: ${owner}</span>
+        <span class="usersModelsSpan2">Criador: <span class="usersModelsSpan1">${owner}</span>
       </div>
     `
 }
 
-  
+
+function confirmORder() {
+   const post = axios.post("https://mock-api.driven.com.br/api/v4/shirts-api/shirts", {model:modelPost, neck:neckPost, material:materialPost, image: imagePost, owner:ownerPost, author:ownerPost}); 
+   
+   
+
+};
 
 
 
-  /* function statusDaCompra(){
-
-    
-    if(){
-        alert("Encomenda confirmada!")
-    }else{
-        alert("Ops, não conseguimos processar sua encomenda")
-    }
-} */
 
 
-  
+
+

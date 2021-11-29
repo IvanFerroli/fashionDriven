@@ -23,15 +23,15 @@
                 </div>
                 <div class="optionsContainer">
                     <div class="model">
-                        <div onclick="selectModel(this)" class="roundDiv">
+                        <div onclick="selectModel(this, 't-shirt')" class="roundDiv">
                             <img src="assets/tshirt.svg">
                         </div>
-                        <div  class="optionSpan">
+                        <div class="optionSpan">
                             <span>T-shirt</span>
                         </div>
                     </div>
                     <div class="model">
-                        <div onclick="selectModel(this)" class="roundDiv">
+                        <div onclick="selectModel(this, 'tank-top')" class="roundDiv">
                             <img src="assets/tank-top.svg">
                         </div>
                         <div  class="optionSpan">
@@ -39,7 +39,7 @@
                         </div>
                     </div>
                     <div class="model">
-                        <div onclick="selectModel(this)" class="roundDiv">
+                        <div onclick="selectModel(this, 'long')" class="roundDiv">
                             <img src="assets/long-sleeves.svg">
                         </div>
                         <div  class="optionSpan">
@@ -52,7 +52,7 @@
                 </div>
                 <div class="optionsContainer">
                     <div class="neck">
-                        <div onclick="selectNeck(this)" class="roundDiv">
+                        <div onclick="selectNeck(this, 'v-neck')" class="roundDiv">
                             <img src="assets/v-neck.svg">
                         </div>
                         <div  class="optionSpan">
@@ -60,7 +60,7 @@
                         </div>
                     </div>
                     <div class="neck">
-                        <div onclick="selectNeck(this)" class="roundDiv">
+                        <div onclick="selectNeck(this, 'round')" class="roundDiv">
                             <img src="assets/shirt.svg">
                         </div>
                         <div  class="optionSpan">
@@ -68,7 +68,7 @@
                         </div>
                     </div>
                     <div class="neck">
-                        <div onclick="selectNeck(this)" class="roundDiv">
+                        <div  onclick="selectNeck(this, 'polo')" class="roundDiv">
                             <img src="assets/polo-shirt.svg">
                         </div>
                         <div  class="optionSpan">
@@ -81,7 +81,7 @@
                 </div>
                 <div class="optionsContainer">
                     <div class="material"> 
-                        <div onclick="selectMaterial(this)" class="roundDiv">
+                        <div onclick="selectMaterial(this, 'silk')" class="roundDiv">
                             <img src="assets/silk.svg">
                         </div>
                         <div  class="optionSpan">
@@ -89,7 +89,7 @@
                         </div>
                     </div>
                     <div class="material">
-                        <div onclick="selectMaterial(this)" class="roundDiv">
+                        <div onclick="selectMaterial(this, 'cotton')" class="roundDiv">
                             <img src="assets/organic-cotton.svg">
                         </div>
                         <div  class="optionSpan">
@@ -97,7 +97,7 @@
                         </div>
                     </div>
                     <div class="material">
-                        <div onclick="selectMaterial(this)" class="roundDiv">
+                        <div onclick="selectMaterial(this, 'polyester')" class="roundDiv">
                             <img src="assets/quimica.svg">
                         </div>
                         <div  class="optionSpan">
@@ -109,7 +109,7 @@
                     <span>Imagem de referência</span>
                 </div>
                 <input class="refImage" type="text" value="" name="refImage" placeholder="Insira o link" oninput="validateSelection()" >
-                <button class="classeDoBotao buttonDisabled" onclick="statusDaCompra">Confirmar pedido</button>
+                <button class="classeDoBotao buttonDisabled" onclick="confirmOrder">Confirmar pedido</button>
             </div>
         </section>
         <section class="ilustrationContainer">
