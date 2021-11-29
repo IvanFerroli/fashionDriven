@@ -158,7 +158,7 @@ footer{
 .contentContainer .optionsContainer .roundDiv.selected {
     border: 3px solid #404EED;
 }
-.userModelsContainer{
+.usersModelsContainer{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -173,18 +173,18 @@ footer{
 
     background-color: blue;
 }
-.userModelsContainer .usersModelsBox{
+.usersModelsContainer .usersModelsBox{
     margin-right: 16.5px;
     height: 236.5px;
     width: 201.5px;
 
     background-color: red;
 }
-.userModelsContainer .usersModelsBox .usersModelsImage{
+.usersModelsContainer .usersModelsBox .usersModelsImage{
     height: 180px;
     width: 180px;
 }
-.userModelsContainer .usersModelsBox .usersModelsSpan{
+.usersModelsContainer .usersModelsBox .usersModelsSpan{
     font-size: 20px;
     font-family: roboto;
     font-weight: 700;
