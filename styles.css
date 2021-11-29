@@ -112,11 +112,13 @@ button{
 
     margin-left: auto;
     margin-right: auto;
-    margin-bottom: 31px; 
+    margin-bottom: 0px; 
 
    
 }
 .optionSpan{
+    display: flex;
+    justify-content: center;
     margin-top: 8.5px;
 }
 input::placeholder{
@@ -128,24 +130,64 @@ input::placeholder{
     color: #818181;
 }
 footer{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
     width: 100%;
     height: 342px;
 
     margin-right: 0px;
+    position: relative;
     
-    background-color: red;
+    background-color: #ffffff;
 }
-footer div span{
+#lastOrders{
+    position:absolute;
+    top: 30px;
+    height: 30px;
     font-size: 24px;
     font-family: roboto;
     font-weight: 400;
     font-style: normal;
 
     margin-left: 5vw;
-    margin-top: 150px;
-    
-
+    margin-bottom: 15px;
+   
 }
 .contentContainer .optionsContainer .roundDiv.selected {
     border: 3px solid #404EED;
+}
+.userModelsContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    overflow-x:scroll;
+
+    height: 236.5px;
+    width: 100%;
+    margin-top: 15.5px;
+    margin-left: 5vw;
+    margin-right: 5vw;
+
+    background-color: blue;
+}
+.userModelsContainer .usersModelsBox{
+    margin-right: 16.5px;
+    height: 236.5px;
+    width: 201.5px;
+
+    background-color: red;
+}
+.userModelsContainer .usersModelsBox .usersModelsImage{
+    height: 180px;
+    width: 180px;
+}
+.userModelsContainer .usersModelsBox .usersModelsSpan{
+    font-size: 20px;
+    font-family: roboto;
+    font-weight: 700;
+    font-style: normal;
+    color: #232323;
 }
