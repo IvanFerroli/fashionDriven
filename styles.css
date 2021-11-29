@@ -18,11 +18,11 @@ main {
     background-color: #e5e5e5;
 }
 span{
-    font-family: robototo;
+    font-family: roboto;
     font-weight: 400;
     font-style: normal;
     font-size: 18px;
-    color: #23233
+    color: #232323;
 }
 input{
     width: 399px;
@@ -119,6 +119,14 @@ button{
 .optionSpan{
     margin-top: 8.5px;
 }
+input::placeholder{
+    margin: auto;
+    font-family: roboto;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    color: #818181;
+}
 footer{
     width: 100%;
     height: 342px;
@@ -127,8 +135,16 @@ footer{
     
     background-color: red;
 }
-footer span{
-    background-color: blue;
+footer div span{
+    font-size: 24px;
+    font-family: roboto;
+    font-weight: 400;
+    font-style: normal;
+
+    margin-left: 5vw;
+    margin-top: 150px;
+    
+
 }
 .contentContainer .optionsContainer .roundDiv.selected {
     border: 3px solid #404EED;

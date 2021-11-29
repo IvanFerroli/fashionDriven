@@ -10,7 +10,6 @@ let itemsSelected = 0;
 let model
 let neck;
 let material;
-let confirmationRefImage = refImage.value
 
 alert(confirmationRefImage)
 
@@ -20,13 +19,15 @@ function selectModel(element) {
 
     if(selected != null){
         selected.classList.remove("selected")
+    }else{
+
+        itemsSelected = itemsSelected + 1
     }
 
     element.classList.add("selected")
 
-    itemsSelected = itemsSelected + 1
 
-    /* function validateSelection(); */
+    validateSelection(); 
 
 }
 
@@ -36,13 +37,15 @@ function selectNeck(element) {
 
     if(selected != null){
         selected.classList.remove("selected")
+    }else{
+        
+        itemsSelected = itemsSelected + 1
     }
 
     element.classList.add("selected")
 
-    itemsSelected = itemsSelected + 1
-
-    /* function validateSelection(); */
+    
+    validateSelection(); 
 
 }
 
@@ -52,22 +55,50 @@ function selectMaterial(element) {
 
     if(selected != null){
         selected.classList.remove("selected")
+    }else{
+
+        itemsSelected = itemsSelected + 1
     }
 
     element.classList.add("selected")
 
-    itemsSelected = itemsSelected + 1
-
-    /* function validateSelection(); */
+    
+    validateSelection();
 
 }
 
-/* function validateSelection (confirmationModel, confirmationNeck, confirmationMaterial, confirmationReferenceImage){
+function validateSelection (confirmationModel, confirmationNeck, confirmationMaterial, confirmationReferenceImage){
 
+    const inputRefImage = document.querySelector(".refImage")
+    const botao = document.querySelector(".classeDoBotao")
 
-    if(itemsSelected === 3 && confirmationRefImage != null){
-        buttonDisabled.classList.remove("buttonDisabled")
+    if(itemsSelected === 3 && validURL(inputRefImage.value) === true){
+        botao.classList.remove("buttonDisabled")
+        
+    }else{
+        botao.classList.add("buttonDisabled")
+    }
+}
+
+function validURL(str) {
+    var pattern = new RegExp('^(https?:\\/\\/)?'+ // protocol
+      '((([a-z\\d]([a-z\\d-]*[a-z\\d])*)\\.)+[a-z]{2,}|'+ // domain name
+      '((\\d{1,3}\\.){3}\\d{1,3}))'+ // OR ip (v4) address
+      '(\\:\\d+)?(\\/[-a-z\\d%_.~+]*)*'+ // port and path
+      '(\\?[;&a-z\\d%_.~+=-]*)?'+ // query string
+      '(\\#[-a-z\\d_]*)?$','i'); // fragment locator
+    return !!pattern.test(str);
+  }
+
+/* function statusDaCompra(){
+
+    
+    if(){
+        alert("Encomenda confirmada!")
+    }else{
+        alert("Ops, não conseguimos processar sua encomenda")
     }
 } */
+
 
 

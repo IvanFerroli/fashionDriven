@@ -24,40 +24,54 @@
                         <div onclick="selectModel(this)" class="roundDiv">
                             <img src="assets/tshirt.svg">
                         </div>
-                        <span class="optionSpan">T-shirt</span>
+                        <div  class="optionSpan">
+                            <span>Camiseta</span>
+                        </div>
                     </div>
                     <div class="model">
                         <div onclick="selectModel(this)" class="roundDiv">
                             <img src="assets/tank-top.svg">
                         </div>
-                        <span class="optionSpan">Camiseta</span>
+                        <div  class="optionSpan">
+                            <span>Camiseta</span>
+                        </div>
                     </div>
                     <div class="model">
                         <div onclick="selectModel(this)" class="roundDiv">
                             <img src="assets/long-sleeves.svg">
                         </div>
-                        <span class="optionSpan">Manga longa</span>
+                        <div  class="optionSpan">
+                            <span>Camiseta</span>
+                        </div>
                     </div>
                 </div>
-                <span class="optionSpan">Escolha a gola</span>
+                    <div  class="optionSpan">
+                        <span>Camiseta</span>
+                    </div>
                 <div class="optionsContainer">
                     <div class="neck">
                         <div onclick="selectNeck(this)" class="roundDiv">
                             <img src="assets/v-neck.svg">
                         </div>
-                        <span class="optionSpan">Gola V</span>
+                        <div  class="optionSpan">
+                            <span>Camiseta</span>
+                        </div>
                     </div>
                     <div class="neck">
                         <div onclick="selectNeck(this)" class="roundDiv">
                             <img src="assets/shirt.svg">
                         </div>
-                        <span class="optionSpan">Gola redonda</span>
+                        <div  class="optionSpan">
+                            <span>Camiseta</span>
+                        </div>
                     </div>
                     <div class="neck">
                         <div onclick="selectNeck(this)" class="roundDiv">
                             <img src="assets/polo-shirt.svg">
                         </div>
-                        <span class="optionSpan">Gola polo</span>
+                        <div  class="optionSpan">
+                            <span>Camiseta</span>
+                        </div>
                     </div>
                 </div>
                 <span>Escolha o tecido</span>
@@ -66,23 +80,29 @@
                         <div onclick="selectMaterial(this)" class="roundDiv">
                             <img src="assets/silk.svg">
                         </div>
-                        <span class="optionSpan">Seda</span>
+                        <div  class="optionSpan">
+                            <span>Camiseta</span>
+                        </div>
                     </div>
                     <div class="material">
                         <div onclick="selectMaterial(this)" class="roundDiv">
                             <img src="assets/organic-cotton.svg">
                         </div>
-                        <span class="optionSpan">Algodão</span>
+                        <div  class="optionSpan">
+                            <span>Camiseta</span>
+                        </div>
                     </div>
                     <div class="material">
                         <div onclick="selectMaterial(this)" class="roundDiv">
                             <img src="assets/quimica.svg">
                         </div>
-                        <span class="optionSpan">Poliéster</span>
+                        <div  class="optionSpan">
+                            <span>Camiseta</span>
+                        </div>
                     </div>
                 </div>
-                <input class="refImage" type="text" value="" name="refImage" placeholder="Insira o link" >
-                <button class="buttonDisabled">Confirmar pedido</button>
+                <input class="refImage" type="text" value="" name="refImage" placeholder="Insira o link" oninput="validateSelection()" >
+                <button class="classeDoBotao buttonDisabled" onclick="statusDaCompra">Confirmar pedido</button>
             </div>
         </section>
         <section class="ilustrationContainer">
@@ -90,7 +110,9 @@
         </section>
     </main>
     <footer>
-        <span>últimos pedidos</span>
+        <div>
+            <span>últimos pedidos</span>
+        </div>
     </footer>
     <script src="script.js"></script>
 </body>
