@@ -73,7 +73,7 @@ function validateSelection (confirmationModel, confirmationNeck, confirmationMat
 
     const inputRefImage = document.querySelector(".refImage")
     const botao = document.querySelector(".classeDoBotao")
-
+    usersModelsContainer
     if(itemsSelected === 3 && validURL(inputRefImage.value) === true){
         botao.classList.remove("buttonDisabled")
         
@@ -101,18 +101,14 @@ function validURL(str) {
           let data = answer.data;
           for (let i = 0; i < data.length; i++) {
               let id = data[i].id;
-              let model = data[i].model;
-              let neck = data[i].neck;
-              let material = data[i].material;
               let image = data[i].image;
-              let owner = data[i].owner;
               let author = data[i].author;
               
+              usersModelsBox.innerHTML += renderizeUsersModels(id, image, author)
             }
+        };
 
-      usersModelsContainer.innerHTML += renderizeUsersModels(id, image, author)
-
-}
+    }
 
 getUsersModels() */
 
@@ -123,26 +119,21 @@ const getUsersModels = () => {
         console.log(answer);
         let data = answer.data;
         for (let i = 0; i < data.length; i++) {
-            let id = data[i].id;
             let image = data[i].image;
-            let author = data[i].author;
+            let owner = data[i].owner;
             
-            usersModelsBox.innerHTML += usersModelsBox(id, image, author)
+            usersModelsContainer.innerHTML += renderizeUsersModels(image, owner)
         }
     });
 };
 
 getUsersModels();
 
-function renderizeUsersModels(id, image, author){
+function renderizeUsersModels(image, owner){
     return `
-      <div class="id${id} userModelsBox">
-          <div class="usersModelsImage">
-              <img src="${image}">
-          </div>
-          <div class="usersModelsSpan">
-              <span>Criador: ${author}</span>
-          </div>
+      <div class="usersModelsBox">
+        <img class="usersModelsImage" src="${image}">
+        <span class="usersModelsSpan">Criador: ${owner}</span>
       </div>
     `
 }

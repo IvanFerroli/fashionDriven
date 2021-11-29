@@ -171,20 +171,22 @@ footer{
     margin-left: 5vw;
     margin-right: 5vw;
 
-    background-color: blue;
+    
 }
-.usersModelsContainer .usersModelsBox{
+.usersModelsBox{
+    margin-top: 0px;
+    margin-bottom:8px;
     margin-right: 16.5px;
     height: 236.5px;
     width: 201.5px;
 
-    background-color: red;
+    
 }
-.usersModelsContainer .usersModelsBox .usersModelsImage{
+.usersModelsImage{
     height: 180px;
     width: 180px;
 }
-.usersModelsContainer .usersModelsBox .usersModelsSpan{
+.usersModelsSpan{
     font-size: 20px;
     font-family: roboto;
     font-weight: 700;
